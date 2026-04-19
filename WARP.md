@@ -25,18 +25,18 @@ When changing behavior/content, treat `SKILL.md` as the source of truth, and upd
 Recommended (clone directly into Claude Code skills directory):
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
+git clone https://github.com/sarkrui/hci-humanizer.git ~/.claude/skills/hci-humanizer
 ```
 
 Manual install/update (only the skill file):
 ```bash
-mkdir -p ~/.claude/skills/humanizer
-cp SKILL.md ~/.claude/skills/humanizer/
+mkdir -p ~/.claude/skills/hci-humanizer
+cp -r SKILL.md samples ~/.claude/skills/hci-humanizer/
 ```
 
 ## How to “run” it (Claude Code)
 Invoke the skill:
-- `/humanizer` then paste text
+- `/hci-humanizer` then paste text
 
 ## Making changes safely
 ### Versioning (keep in sync)

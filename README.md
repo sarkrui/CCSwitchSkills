@@ -1,6 +1,6 @@
-# Humanizer
+# HCI Humanizer
 
-A skill for Claude Code and OpenCode that removes signs of AI-generated writing from text, making it sound more natural and human.
+A Claude Code / OpenCode skill that polishes HCI / interaction-design writing (ACM TEI, DIS, CHI) so it reads as designerly and authored — not AI-generated. Forked and tuned from the original Humanizer skill, with HCI-specific anti-patterns, a research-through-design vocabulary, and an auto-loaded voice-sample folder.
 
 ## Installation
 
@@ -10,14 +10,14 @@ Clone directly into Claude Code's skills directory:
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
+git clone https://github.com/sarkrui/hci-humanizer.git ~/.claude/skills/hci-humanizer
 ```
 
 Or copy the skill file manually if you already have this repo cloned:
 
 ```bash
-mkdir -p ~/.claude/skills/humanizer
-cp SKILL.md ~/.claude/skills/humanizer/
+mkdir -p ~/.claude/skills/hci-humanizer
+cp -r SKILL.md samples ~/.claude/skills/hci-humanizer/
 ```
 
 ### OpenCode
@@ -26,24 +26,24 @@ Clone directly into OpenCode's skills directory:
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-git clone https://github.com/blader/humanizer.git ~/.config/opencode/skills/humanizer
+git clone https://github.com/sarkrui/hci-humanizer.git ~/.config/opencode/skills/hci-humanizer
 ```
 
 Or copy the skill file manually if you already have this repo cloned:
 
 ```bash
-mkdir -p ~/.config/opencode/skills/humanizer
-cp SKILL.md ~/.config/opencode/skills/humanizer/
+mkdir -p ~/.config/opencode/skills/hci-humanizer
+cp -r SKILL.md samples ~/.config/opencode/skills/hci-humanizer/
 ```
 
-> **Note:** OpenCode also scans `~/.claude/skills/` for compatibility, so a single clone into `~/.claude/skills/humanizer/` works for both tools.
+> **Note:** OpenCode also scans `~/.claude/skills/` for compatibility, so a single clone into `~/.claude/skills/hci-humanizer/` works for both tools.
 
 ## Usage
 
 ### Claude Code
 
 ```
-/humanizer
+/hci-humanizer
 
 [paste your text here]
 ```
@@ -51,7 +51,7 @@ cp SKILL.md ~/.config/opencode/skills/humanizer/
 ### OpenCode
 
 ```
-/humanizer
+/hci-humanizer
 
 [paste your text here]
 ```
@@ -67,7 +67,7 @@ Please humanize this text: [your text]
 To match your personal writing style, provide a sample of your own writing:
 
 ```
-/humanizer
+/hci-humanizer
 
 Here's a sample of my writing for voice matching:
 [paste 2-3 paragraphs of your own writing]
